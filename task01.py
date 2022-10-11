@@ -9,10 +9,11 @@ import random
 list = []
 for _ in range(0,20):
     list.append(random.randint(1, 100) * random.choice((1, -1)))
-sum = 0
+print(list)
 
+result = []
 for i in range(0,len(list)):
     if i % 2 == 1:
-        sum += list[i]
-print(list)
-print(f'Сумма элементов на нечетных позициях списка: {sum}')
+        result.append(list[i])
+print(result)
+print(f'Сумма элементов на нечетных позициях списка: {sum(result)}')
